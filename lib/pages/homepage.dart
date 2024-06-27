@@ -20,7 +20,8 @@ class _HomepageState extends State<Homepage> {
         Container(
           height: 500,
           width: double.maxFinite,
-          color: Colors.blueGrey,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(colors:[Colors.transparent,CustomColor.bgLight1])),
           child:Row(children: [Text('nG'),
           Spacer(),
           for(int i=0;i<5;i++)
