@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants/colors.dart';
+import 'package:my_portfolio/constants/nav_items.dart';
+import 'package:my_portfolio/widgets/header_desktop.dart';
+import 'package:my_portfolio/widgets/site_logo.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -17,20 +20,16 @@ class _HomepageState extends State<Homepage> {
         scrollDirection: Axis.horizontal,
         children: [
         //Main
-        Container(
-          height: 60.0,
-          margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0),
-          width: double.maxFinite,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(colors:[Colors.transparent,CustomColor.bgLight1]),borderRadius: BorderRadius.circular(100)),
-          child:Row(children: [Text('nG'),
-          Spacer(),
-          for(int i=0;i<5;i++)
-          Padding(
-            padding: const EdgeInsets.only(right: 20.0),
-            child: TextButton(onPressed: (){}, child: Text('Button')),
-          )],),
-        ),
+      // HeaderDesktop(),
+       Container(
+          height: 50.0,
+         margin: const EdgeInsets.fromLTRB(40, 5, 20, 5),
+         child: Row(children: [
+          SiteLogo(onTap: (){},),
+          const Spacer(),
+          IconButton(onPressed: (){}, icon: Icon(Icons.menu))
+         ],),
+          ),
          //Skills
         Container(
           height: 500,
