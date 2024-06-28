@@ -18,14 +18,18 @@ class _HomepageState extends State<Homepage> {
         children: [
         //Main
         Container(
-          height: 500,
+          height: 60.0,
+          margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0),
           width: double.maxFinite,
           decoration: BoxDecoration(
-            gradient: LinearGradient(colors:[Colors.transparent,CustomColor.bgLight1])),
+            gradient: LinearGradient(colors:[Colors.transparent,CustomColor.bgLight1]),borderRadius: BorderRadius.circular(100)),
           child:Row(children: [Text('nG'),
           Spacer(),
           for(int i=0;i<5;i++)
-          TextButton(onPressed: (){}, child: Text('Button'))],),
+          Padding(
+            padding: const EdgeInsets.only(right: 20.0),
+            child: TextButton(onPressed: (){}, child: Text('Button')),
+          )],),
         ),
          //Skills
         Container(
