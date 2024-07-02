@@ -3,8 +3,9 @@ import 'package:my_portfolio/styles/styles.dart';
 import 'package:my_portfolio/widgets/site_logo.dart';
 
 class HeaderMobile extends StatelessWidget {
-  const HeaderMobile({super.key});
-
+  const HeaderMobile({super.key, this.onLogoTap, this.onMenuTap});
+final VoidCallback?onLogoTap;
+final VoidCallback?onMenuTap;
   @override
   Widget build(BuildContext context) {
     return   Container(
@@ -12,9 +13,9 @@ class HeaderMobile extends StatelessWidget {
          margin: const EdgeInsets.fromLTRB(40, 5, 20, 5),
          decoration: kheaderdesktop,
          child: Row(children: [
-          SiteLogo(onTap: (){},),
+          SiteLogo(onTap: onLogoTap,),
           const Spacer(),
-          IconButton(onPressed: (){}, 
+          IconButton(onPressed: onMenuTap, 
           icon:const Icon(Icons.menu)),
           const SizedBox(width: 15,)
          ],),

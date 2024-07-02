@@ -14,16 +14,31 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  final ScaffoldKey =GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key:ScaffoldKey,
       backgroundColor: CustomColor.scaffoldBg,
+      endDrawer: Drawer(
+         backgroundColor: CustomColor.scaffoldBg,
+         child: ListView(children: [
+          
+         ],),
+      ),
       body:ListView(
         scrollDirection: Axis.horizontal,
         children: [
         //Main
       // HeaderDesktop(),
-     //HeaderMobile(),
+     HeaderMobile(
+      onLogoTap: () {
+        
+      },
+      onMenuTap: () {
+        ScaffoldKey.currentState?.openEndDrawer();
+      },
+     ),
          //Skills
         Container(
           height: 500,
