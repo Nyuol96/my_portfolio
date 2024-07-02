@@ -1,10 +1,7 @@
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
+import 'package:my_portfolio/constants/colors.dart';
 
-class Styles extends StatelessWidget {
-  const Styles({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
+BoxDecoration kheaderdesktop=BoxDecoration(
+            gradient: const LinearGradient(
+              colors:[Colors.transparent,CustomColor.bgLight1]),
+              borderRadius: BorderRadius.circular(100));
