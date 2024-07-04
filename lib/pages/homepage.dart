@@ -37,6 +37,9 @@ class _HomepageState extends State<Homepage> {
             ScaffoldKey.currentState?.openEndDrawer();
           },
          ),
+             Container(child: Row(children: [
+              Text("Hi,\ni'm nyUol gitbUong\na Flutter Developer"),
+             ],),),
              //Skills
             Container(
               height: 500,
