@@ -5,6 +5,7 @@ import 'package:my_portfolio/constants/size.dart';
 import 'package:my_portfolio/styles/styles.dart';
 import 'package:my_portfolio/widgets/header_desktop.dart';
 import 'package:my_portfolio/widgets/header_mobile.dart';
+import 'package:my_portfolio/widgets/main_mobile.dart';
 import 'package:my_portfolio/widgets/maindesktop.dart';
 import 'package:my_portfolio/widgets/site_logo.dart';
 
@@ -41,8 +42,9 @@ class _HomepageState extends State<Homepage> {
             ScaffoldKey.currentState?.openEndDrawer();
           },
          ),
-            // const Maindesktop(),
-          
+           if(constraints.maxWidth>kMindesktopwidth)
+             const Maindesktop()
+          else const MainMobile(),
              //Skills
             Container(
               height: 500,
