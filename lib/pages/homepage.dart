@@ -17,6 +17,8 @@ class _HomepageState extends State<Homepage> {
   final ScaffoldKey =GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
+    final screenSize=MediaQuery.of(context).size;
+    final screenwidth=screenSize.width;
     return LayoutBuilder(
       builder: (context,constraints) {
         return Scaffold(
@@ -38,7 +40,12 @@ class _HomepageState extends State<Homepage> {
           },
          ),
              Container(child: Row(children: [
+             Column(children: [
               Text("Hi,\ni'm nyUol gitbUong\na Flutter Developer"),
+              ElevatedButton(onPressed: (){}, child: const Text('Get in Touch'),),
+             ],),
+              Image.asset('Assets/nyuol.jpeg',
+              width: screenwidth,),
              ],),),
              //Skills
             Container(
