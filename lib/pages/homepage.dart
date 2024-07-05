@@ -18,6 +18,9 @@ class _HomepageState extends State<Homepage> {
   final ScaffoldKey =GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
+      final screenSize=MediaQuery.of(context).size;
+      final screenwidth=screenSize.width;
+      final screenheight=screenSize.height;
     return LayoutBuilder(
       builder: (context,constraints) {
         return Scaffold(
@@ -38,7 +41,8 @@ class _HomepageState extends State<Homepage> {
             ScaffoldKey.currentState?.openEndDrawer();
           },
          ),
-             Maindesktop(),
+            // const Maindesktop(),
+          
              //Skills
             Container(
               height: 500,

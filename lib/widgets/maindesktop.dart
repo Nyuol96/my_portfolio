@@ -29,7 +29,7 @@ class Maindesktop extends StatelessWidget {
                 child: ElevatedButton(onPressed: (){}, child: const Text('Get in Touch'),)),
              ],),
               Image.asset('Assets/nyuol.jpeg',
-              width: screenheight/2,),
+              width: screenwidth/2,),
              ],),);
   }
 }
