@@ -5,6 +5,7 @@ import 'package:my_portfolio/constants/size.dart';
 import 'package:my_portfolio/styles/styles.dart';
 import 'package:my_portfolio/widgets/header_desktop.dart';
 import 'package:my_portfolio/widgets/header_mobile.dart';
+import 'package:my_portfolio/widgets/maindesktop.dart';
 import 'package:my_portfolio/widgets/site_logo.dart';
 
 class Homepage extends StatefulWidget {
@@ -17,8 +18,6 @@ class _HomepageState extends State<Homepage> {
   final ScaffoldKey =GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
-    final screenSize=MediaQuery.of(context).size;
-    final screenwidth=screenSize.width;
     return LayoutBuilder(
       builder: (context,constraints) {
         return Scaffold(
@@ -39,14 +38,7 @@ class _HomepageState extends State<Homepage> {
             ScaffoldKey.currentState?.openEndDrawer();
           },
          ),
-             Container(child: Row(children: [
-             Column(children: [
-              Text("Hi,\ni'm nyUol gitbUong\na Flutter Developer"),
-              ElevatedButton(onPressed: (){}, child: const Text('Get in Touch'),),
-             ],),
-              Image.asset('Assets/nyuol.jpeg',
-              width: screenwidth,),
-             ],),),
+             Maindesktop(),
              //Skills
             Container(
               height: 500,
