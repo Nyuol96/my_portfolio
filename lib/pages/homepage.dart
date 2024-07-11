@@ -47,8 +47,38 @@ class _HomepageState extends State<Homepage> {
           else const MainMobile(),
              //Skills
             Container(
+              width:screenwidth,
+              padding:const EdgeInsets.fromLTRB(25, 20, 25, 60),
               height: 500,
-              width: double.maxFinite,
+             color: CustomColor.bgLight1,
+             child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+              const Text('What I can Do!',
+              style: TextStyle(fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: CustomColor.whitePrimary),
+              ),
+              //platforms
+              Row(
+                children: [
+                  Wrap(
+                    children: [
+                      Container(
+                        width: 200,
+                        decoration: BoxDecoration(color: CustomColor.bgLight2,
+                        borderRadius: BorderRadius.circular(5)),
+                        child: ListTile(
+                          leading: Image.asset(''),
+                          title: Text(''),
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              )
+              ],
+             ),
               ),
                   //Contact
             Container(
