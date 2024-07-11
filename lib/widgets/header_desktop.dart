@@ -19,7 +19,7 @@ class HeaderDesktop extends StatelessWidget {
           for(int i=0;i<navTitles.length;i++)
           Padding(
             padding: const EdgeInsets.only(right: 20.0),
-            child: TextButton(onPressed: (){}, child: Text(navTitles[1],
+            child: TextButton(onPressed: (){}, child: Text(navTitles[i],
             style: TextStyle(fontSize: 16,
             fontWeight: FontWeight.w500,color: CustomColor.whitePrimary),)),
           )],),

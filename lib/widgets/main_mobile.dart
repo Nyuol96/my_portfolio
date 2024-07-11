@@ -37,7 +37,8 @@ class MainMobile extends StatelessWidget {
               const SizedBox(height: 15,),
               SizedBox(
                 width: 180,
-                child: ElevatedButton(onPressed: (){}, child: const Text('Get in Touch'),)),
+                child: ElevatedButton(onPressed: (){},
+                 child: const Text('Get in Touch'),)),
           
             ],),);
   }

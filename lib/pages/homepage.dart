@@ -86,7 +86,7 @@ class _HomepageState extends State<Homepage> {
                               vertical: 10),
                            
                             leading: Image.asset(platformItems[i]["img"],
-                            width:20,),
+                            width:26,),
                             title: Text(platformItems[i]["title"]),
                           ),
                         )
