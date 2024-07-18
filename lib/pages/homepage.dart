@@ -65,10 +65,55 @@ class _HomepageState extends State<Homepage> {
               ),
               const SizedBox(height: 50,),
               //platforms
-         SkillsDesktop(),
+              // const SkillsDesktop(),
+              Column(
+                children: [
+                  for(int i=0;i<platformItems.length;i++)
+                  Container(margin: EdgeInsets.only(bottom: 5.0),
+                  width: double.maxFinite,
+                  decoration: BoxDecoration(
+                    color: CustomColor.bgLight2,
+                    borderRadius: BorderRadius.circular(5),
+                    
+                  ),
+                  child: ListTile(
+                    contentPadding:const EdgeInsets.symmetric(
+                      vertical: 10.0,
+                      horizontal: 20.0),
+                    leading: Image.asset(platformItems[i]["img"],
+                    width: 26,),
+                  title: Text(platformItems[i]["title"]),),
+                  ),
+                   const SizedBox(height: 50.0,),
+              Wrap(
+                spacing: 10.0,
+                runSpacing: 10.0,
+                alignment: WrapAlignment.center,
+                children: [
+                   for(int i=0;i<platformItems.length;i++)
+                        Container(
+                          width: 200,
+                          decoration: BoxDecoration(color: CustomColor.bgLight2,
+                          borderRadius: BorderRadius.circular(5)),
+                          child: ListTile(
+                            contentPadding: const EdgeInsets.symmetric(
+                              horizontal: 20,
+                              vertical: 10),
+                           
+                            leading: Image.asset(platformItems[i]["img"],
+                            width:26,),
+                            title: Text(platformItems[i]["title"]),
+                          ),
+                        )
+                ],
+              ),
+
+              ],
+              )
               ],
              ),
               ),
+             
                   //Contact
             Container(
               height: 500,
