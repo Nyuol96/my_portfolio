@@ -11,6 +11,7 @@ import 'package:my_portfolio/widgets/main_mobile.dart';
 import 'package:my_portfolio/widgets/maindesktop.dart';
 import 'package:my_portfolio/widgets/site_logo.dart';
 import 'package:my_portfolio/widgets/skills_desktop.dart';
+import 'package:my_portfolio/widgets/skills_mobile.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -65,8 +66,10 @@ class _HomepageState extends State<Homepage> {
               ),
               const SizedBox(height: 50,),
               //platforms
-              // const SkillsDesktop(),
-        
+              if (constraints.maxWidth>=kMeddesktopwidth)
+             const SkillsDesktop()
+             else
+             const SkillsMobile(),
               ],
              ),
               ),
